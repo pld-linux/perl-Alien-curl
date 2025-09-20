@@ -20,8 +20,8 @@ BuildRequires:	perl-Alien-Build >= 0.40
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
 BuildRequires:	perl-Env-ShellWords
 BuildRequires:	perl-FFI-CheckLib
-BuildRequires:	perl-PkgConfig
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
@@ -30,6 +30,7 @@ BuildRequires:	perl-Test-Alien >= 0.11
 BuildRequires:	perl-Test-Simple >= 0.98
 BuildRequires:	perl-Test2-Suite >= 0.000121
 %endif
+Requires:	curl-devel
 Requires:	perl-Alien-Base >= 0.038
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
